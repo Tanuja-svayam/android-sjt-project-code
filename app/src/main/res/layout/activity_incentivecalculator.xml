@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel3"
+            android:layout_below="@+id/rel1">
+
+
+            <TableLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tablecash">
+
+                <TableRow >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:text="SALES AMOUNT"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:maxLines="1"
+                        android:width="50dp"/>
+
+                    <EditText
+                        android:id="@+id/sale_gross_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text=""
+                        android:maxLines="1"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:width="200dp"/>
+                </TableRow>
+                <TableRow >
+
+                <Button
+                    android:id="@+id/calculate_incentive_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/button_bg"
+                    android:text="Calculate"
+                    android:textColor="#fff" />
+                </TableRow>
+                <TableRow >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:text="MODEL"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:maxLines="1"
+                        android:width="50dp"/>
+
+                    <EditText
+                        android:id="@+id/modelname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text=""
+                        android:maxLines="1"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:width="200dp"/>
+
+                </TableRow>
+                <TableRow >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:text="BRAND"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/brandname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text=""
+                        android:maxLines="1"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:width="200dp"/>
+                </TableRow>
+                <TableRow >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:text="PRODUCT CATEGORY"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/topcategoryname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text=""
+                        android:maxLines="1"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:width="200dp"/>
+                </TableRow>
+
+
+
+                               <TableRow >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="MRP"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:maxLines="1"/>
+
+                <EditText
+                    android:id="@+id/mrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:text=""
+                    android:maxLines="1"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:width="200dp"/>
+                </TableRow>
+                <TableRow >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="DP"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:maxLines="1"/>
+
+                <EditText
+                    android:id="@+id/dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:text=""
+                    android:maxLines="1"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:width="200dp"/>
+                </TableRow>
+
+                <TableRow  >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:text="OFFER PRICE"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/slc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text=""
+                        android:maxLines="1"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:width="200dp"/>
+
+
+                </TableRow>
+
+
+
+                <TableRow  >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:text="DIV"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/div"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text=""
+                        android:maxLines="1"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:width="200dp"/>
+
+
+                </TableRow>
+
+
+                <TableRow  >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:text="MARGIN"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/margin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text=""
+                        android:maxLines="1"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:width="200dp"/>
+
+
+                </TableRow>
+
+                <TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"/>
+
+                </TableRow>
+
+                <TableRow android:background="@drawable/cell_shape_header">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="BASE SLAB"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"/>
+
+                </TableRow>
+
+
+                <TableRow >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="SLAB - 1 BASE"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:maxLines="1"/>
+
+                <EditText
+                    android:id="@+id/slab_1_base"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:text=""
+                    android:maxLines="1"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:width="200dp"/>
+                </TableRow>
+                <TableRow  >
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="SLAB - 2 BASE"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:maxLines="1"/>
+
+                <EditText
+                    android:id="@+id/slab_2_base"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:text=""
+                    android:maxLines="1"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:width="200dp"/>
+                </TableRow>
+
+
+                <TableRow  >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:text="SLAB - 3 BASE"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/slab_3_base"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text=""
+                        android:maxLines="1"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:width="200dp"/>
+                </TableRow>
+
+
+
+                <TableRow >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="SLAB - 4 BASE"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:maxLines="1"/>
+
+                <EditText
+                    android:id="@+id/slab_4_base"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:text=""
+                    android:maxLines="1"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:width="200dp"/>
+                </TableRow>
+                <TableRow  >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="SLAB - 5 BASE"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:maxLines="1"/>
+
+                <EditText
+                    android:id="@+id/slab_5_base"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:text=""
+                    android:maxLines="1"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right"
+                    android:width="200dp"/>
+
+                </TableRow>
+                <TableRow >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray"/>
+                </TableRow>
+
+                <TableRow android:background="@drawable/cell_shape_header" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="INCENTIVE"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"/>
+                </TableRow>
+
+
+                <TableRow  >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:text="SLAB - 1 INCENTIVE"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/slab_1_incentive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text=""
+                        android:maxLines="1"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:width="200dp"/>
+                </TableRow>
+
+                <TableRow >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:text="SLAB - 2 INCENTIVE"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/slab_2_incentive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text=""
+                        android:maxLines="1"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:width="200dp"/>
+                </TableRow>
+                <TableRow  >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:text="SLAB - 3 INCENTIVE"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/slab_3_incentive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text=""
+                        android:maxLines="1"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:width="200dp"/>
+                </TableRow>
+
+                <TableRow >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:text="SLAB - 4 INCENTIVE"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/slab_4_incentive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text=""
+                        android:maxLines="1"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:width="200dp"/>
+                </TableRow>
+
+                <TableRow >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dip"
+                        android:text="SLAB - 5 INCENTIVE"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/slab_5_incentive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint=""
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text=""
+                        android:maxLines="1"
+                        android:layout_alignParentRight="true"
+                        android:gravity="right"
+                        android:width="200dp"/>
+                </TableRow>
+
+            </TableLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

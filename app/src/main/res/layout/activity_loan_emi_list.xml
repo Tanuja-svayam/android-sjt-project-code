@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+       <!-- Invoice Date -->
+    <TextView
+        android:id="@+id/vemidt_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="EMI Date : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/vemidt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/vemipaiddt_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vemidt_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="EMI Paid Date : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/vemipaiddt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vemidt"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/vreceiptdt_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vemipaiddt_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Receipt Date : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/vreceiptdt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vemipaiddt"
+        android:textColor="#343434"
+
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"
+        android:ellipsize="none"
+        android:scrollHorizontally="false"/>
+
+    <TextView
+        android:id="@+id/emiamt_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vreceiptdt_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="EMI Amount : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/emiamt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vreceiptdt"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/adjamt_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emiamt_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Paid Amount : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/adjamt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emiamt"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/balamt_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adjamt_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="EMI Pending : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/balamt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adjamt"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/overduedays_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/balamt_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Over Due Days : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/overduedays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/balamt"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>

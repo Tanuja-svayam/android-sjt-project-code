@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:label="@string/app_name">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:text="Bill No"
+            
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+            <EditText android:text=""
+                android:id="@+id/invorderno"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_width="fill_parent"
+                android:inputType="textCapCharacters">
+            </EditText>
+            <Button android:text="Go"
+                android:id="@+id/search_invorderno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+            <Button android:id="@+id/pickPurchaseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invoice Date"
+                android:onClick="setPurchaseDate"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:text="Location" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/location"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false">
+            </EditText>
+
+            <Button android:text="Select"
+                android:id="@+id/Button_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:text="Approval Manager" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/fullname"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false">
+            </EditText>
+
+            <Button android:text="Select"
+                android:id="@+id/Button_approval_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:text="Customer" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/custname"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false">
+            </EditText>
+
+            <Button android:text="Select"
+                android:id="@+id/Button_custname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+        </LinearLayout>
+
+        <CheckBox android:id="@+id/withlowside"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="With Low Side"
+            android:layout_weight="1"/>
+
+        <CheckBox android:id="@+id/withinstallation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="With Installation"
+            android:layout_weight="1"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Transport Charges" />
+
+        <EditText
+            android:id="@+id/transportcharges"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Remarks" />
+
+        <EditText
+            android:id="@+id/remarks"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:lines="4"
+            android:inputType="textMultiLine|textCapCharacters"
+            android:gravity="top|left"/>
+
+        <Button
+            android:id="@+id/btnSaveInvoice"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Update Remarks"
+            android:textColor="@color/white"
+
+            android:layout_marginTop="2dip"
+            android:layout_marginBottom="2dip"/>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <TableLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tabletoplocationstock">
+            </TableLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_marginBottom="10dp"/>
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Add Product" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Serial No" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+            <EditText android:text=""
+                android:id="@+id/serialno"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+            <Button android:id="@+id/scan_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scan"
+                android:onClick="setDeliveryDate"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/Button_serialno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:text="Brand Name" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+            <EditText android:text=""
+                android:id="@+id/brandname"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false">
+            </EditText>
+            <Button android:text="Select"
+                android:id="@+id/Button_brandname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:text="Model Name" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+            <EditText android:text=""
+                android:id="@+id/modelname"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false">
+            </EditText>
+            <Button android:text="Select"
+                android:id="@+id/Button_modelname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:text="Quantity" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/quantity"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="number"
+                android:gravity="right">
+            </EditText>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:text="Unit Rate" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/unitrate"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="numberDecimal"
+                android:gravity="right">
+            </EditText>
+
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:text="Delivery Date" />
+
+
+
+        <LinearLayout
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent">
+        <Button android:id="@+id/pickDeliveryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Date"
+            android:onClick="setDeliveryDate"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick_CreateSalesmen_SalesOrder"
+            android:text="Save Product"/>
+    </LinearLayout>
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:text="Product Remarks" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/exchangedetails"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:lines="4"
+                android:inputType="textMultiLine|textCapCharacters"
+                android:gravity="top|left">
+        </EditText>
+    </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btnSalesOrderSendNotification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Send For Approval"
+            android:textColor="@color/white"
+            android:layout_marginTop="2dip"/>
+
+        <Button
+            android:id="@+id/btnCreateInvoice"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Create Invoice"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:layout_marginTop="2dip"/>
+
+        <Button
+            android:id="@+id/btnShowInvoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="View Invoice"
+            android:onClick="download_invoice"
+
+            android:layout_marginTop="2dip" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="View Order"
+            android:onClick="download_order"
+            android:textColor="@color/white"
+            android:layout_marginTop="2dip" />
+
+        <Button
+            android:id="@+id/btnSalesOrderReceipt_Finance"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Finance"
+            android:textColor="@color/white"
+            
+            android:layout_marginTop="2dip"/>
+
+        <Button
+            android:id="@+id/btnSalesOrderReceipt_Outstanding"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Collect On Delivery"
+            android:textColor="@color/white"
+            
+            android:layout_marginTop="2dip"/>
+
+        <Button
+            android:id="@+id/btnSalesOrderReceipt_Cash"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Cash"
+            android:textColor="@color/white"
+            android:layout_marginTop="2dip"/>
+
+        <Button
+            android:id="@+id/btnSalesOrderReceipt_Bank"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Bank"
+            android:textColor="@color/white"
+            android:layout_marginTop="2dip"/>
+
+        <Button
+            android:id="@+id/btnSalesOrderReceipt_Card"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Card"
+            android:textColor="@color/white"
+            android:layout_marginTop="2dip"/>
+
+        <Button
+            android:id="@+id/btnSalesOrderReceipt_Wallet"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Wallet"
+            android:textColor="@color/white"
+            android:layout_marginTop="2dip"/>
+
+
+
+        <TextView
+            android:id="@+id/login_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="#e30000"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

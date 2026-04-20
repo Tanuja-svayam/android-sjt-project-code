@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:label="@string/app_name">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/custname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:typeface="sans"
+            android:textSize="15dip"
+            android:textColor="#040404"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/invordernolabel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/custname"
+            android:textColor="#343434"
+            android:textSize="15dip"
+            android:layout_marginTop="1dip"
+            android:text="Invoice No"/>
+
+        <!-- Artist Name -->
+        <TextView
+            android:id="@+id/invorderno"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/custname"
+            android:textColor="#343434"
+            android:textSize="15dip"
+            android:layout_marginTop="1dip"
+            android:layout_toRightOf="@+id/invordernolabel"/>
+
+        <TextView
+            android:id="@+id/topcategorynamelable"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/invorderno"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"
+            android:text="Category"/>
+
+        <TextView
+            android:id="@+id/topcategoryname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/topcategorynamelable"
+            android:layout_below="@id/invorderno"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"/>
+
+        <TextView
+            android:id="@+id/brandnamelable"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topcategoryname"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"
+            android:text="Brand"/>
+
+        <TextView
+            android:id="@+id/brandname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/brandnamelable"
+            android:layout_below="@id/topcategoryname"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"/>
+
+        <TextView
+            android:id="@+id/modelnamelable"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/brandname"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"
+            android:text="Model"/>
+
+        <TextView
+            android:id="@+id/modelname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/modelnamelable"
+            android:layout_below="@id/brandname"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"/>
+
+        <TextView
+            android:id="@+id/serialnolable"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/modelname"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"
+            android:text="Serial No"/>
+
+        <TextView
+            android:id="@+id/serialno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/serialnolable"
+            android:layout_below="@id/modelname"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"/>
+
+        <TextView
+            android:id="@+id/deliverychargeslable"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/serialno"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"
+            android:text="Delivery Charges"/>
+
+        <TextView
+            android:id="@+id/deliverycharges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/deliverychargeslable"
+            android:layout_below="@id/serialno"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"/>
+
+        <TextView
+            android:id="@+id/receivermobilenolabel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:text="Receiver Mobile No"
+            android:layout_below="@id/deliverychargeslable"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/receivermobileno"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Receiver Mobile No"
+            android:inputType="number"
+            android:layout_below="@id/receivermobilenolabel"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/receivernamelable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:layout_below="@id/receivermobileno"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="Receiver Name" />
+
+        <EditText
+            android:id="@+id/receivername"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/receivernamelable"
+            android:hint="Receiver Name"
+            android:text="" />
+
+        <Button
+            android:id="@+id/signature"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/receivername"
+            android:text="@string/hint_sign"
+            android:padding="5dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"/>
+
+        <Button
+            android:id="@+id/btnCapturePicture"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/btnTakePicture"
+            android:textColor="@color/white"
+            android:layout_below="@id/signature"/>
+
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:layout_below="@id/btnCapturePicture"
+            android:background="@color/colorPrimary"
+            android:onClick="submit_click"
+            android:text="Submit"
+            android:textColor="#fff" />
+
+        <!-- Record video button -->
+
+        <Button
+            android:id="@+id/btnRecordVideo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_toRightOf="@+id/btnCapturePicture"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/btnRecordVideo"
+            android:textColor="@color/white"
+            android:layout_below="@id/btnSubmit"
+            android:layout_marginTop="20dip"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/login_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:layout_below="@id/btnSubmit"
+            android:textColor="#e30000"
+            android:textStyle="bold" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_below="@id/btnSubmit">
+            <TextView
+                android:id="@+id/location_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="#333"
+                android:text="test locatiopion result"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+ </ScrollView>

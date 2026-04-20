@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <TextView
+        android:id="@+id/stocklocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:typeface="sans"
+        android:textSize="20dip"
+        android:textColor="#040404"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/amountinlacslabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Accout In Lacs"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/sales_targetlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stocklocation"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Target"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/sales_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stocklocation"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/sales_mtd_targetlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_targetlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="MTD Target"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/sales_mtd_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_targetlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/sales_month_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_mtd_targetlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text=""
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/sales_month_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_mtd_targetlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/order_sales_achlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_month_name"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Order Booked"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/order_sales_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_month_name"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_marginLeft="20dip"
+        android:layout_toRightOf="@+id/order_sales_achlabel"/>
+
+    <TextView
+        android:id="@+id/order_sales_ach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_month_name"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_marginLeft="150dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/op_sales_achlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_sales_achlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Closing Sales"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/op_sales_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_sales_achlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_marginLeft="20dip"
+        android:layout_toRightOf="@+id/op_sales_achlabel"/>
+
+    <TextView
+        android:id="@+id/op_sales_ach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_sales_achlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/today_sales_achqtylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/op_sales_date"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Today's Sales (Amount)"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/today_sales_ach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/op_sales_date"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:id="@+id/today_sales_quantitylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/today_sales_achqtylabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Today's Sales (Quantity)"
+        android:layout_alignParentLeft="true"
+        />
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/today_sales_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/today_sales_achqtylabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/month_sales_achlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/today_sales_quantitylabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Current Month's Sales"
+        android:layout_alignParentLeft="true"
+        />
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/month_sales_ach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/today_sales_quantitylabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/month_sales_achlabel"/>
+
+    <TextView
+        android:id="@+id/sales_achlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_sales_achlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Total Sales"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/sales_ach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/month_sales_achlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        />
+
+    ------------------------------------------------
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/sales_ach"/>
+
+    <TextView
+        android:id="@+id/sales_total_gaplabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_achlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Total GAP"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/sales_total_gap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_achlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/sales_mtd_gaplabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_total_gaplabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="MTD GAP"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/sales_mtd_gap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_total_gaplabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/sales_month_gaplabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_mtd_gaplabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Current Month GAP"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/sales_month_gap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_mtd_gaplabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+
+    <TextView
+        android:id="@+id/sales_kittylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_month_gaplabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Kitty"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/sales_kitty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_month_gaplabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/sales_ach_percentlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_kittylabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Ach. In %"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/sales_ach_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sales_kittylabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"/>
+
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/sales_ach_percentlabel"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/line1"/>
+
+</RelativeLayout>

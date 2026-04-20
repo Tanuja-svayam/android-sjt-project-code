@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/image_bg"
+        android:layout_marginRight="5dip">
+
+        <ImageView
+            android:id="@+id/modelimage"
+            android:layout_width="50dip"
+            android:layout_height="50dip" />
+    </LinearLayout>
+    <!-- Title Of Song-->
+    <TextView
+        android:id="@+id/modelcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text=""
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="17dip"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/topcategorynamelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/modelcode"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:text=""
+        android:layout_toRightOf="@+id/thumbnail"/>
+
+    <TextView
+        android:id="@+id/topcategoryname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/modelcode"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/topcategorynamelabel"/>
+
+    <TextView
+        android:id="@+id/parentcategorynamelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topcategorynamelabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:text=""
+        android:layout_toRightOf="@+id/thumbnail"/>
+
+    <TextView
+        android:id="@+id/parentcategoryname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topcategorynamelabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/parentcategorynamelabel"/>
+
+    <TextView
+        android:id="@+id/categorynamelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parentcategorynamelabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:text=""
+        android:layout_toRightOf="@+id/thumbnail"/>
+
+    <TextView
+        android:id="@+id/categoryname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parentcategoryname"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/categorynamelabel"/>
+
+    <LinearLayout
+        android:id="@+id/stockgroup"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/categoryname">
+
+        <TextView
+            android:id="@+id/mrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dip"
+            android:textColor="#006600"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dip"
+            android:textColor="#006600"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/slc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dip"
+            android:textColor="#006600"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/stockgroup">
+
+        <TextView
+            android:id="@+id/stock_stk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dip"
+            android:textColor="#006600"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/stock_bkg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dip"
+            android:textColor="#006600"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/stock_avl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dip"
+            android:textColor="#006600"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

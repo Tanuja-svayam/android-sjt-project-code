@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- SECTION 1: Finance Details -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <!-- Rounded Header inside Card -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_header_bg"
+                    android:text="Finance Details"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="16sp"/>
+
+            <!-- Content Area -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- INSERT YOUR EXISTING FINANCE TO DISBURSEMENT VIEWS HERE -->
+                <!-- Ex: financecompany, loanamt, noofmonth, emi, dbdamount, disbursementamt etc. -->
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Finance" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText
+                        android:id="@+id/financecompany"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent"
+                        android:inputType="none"
+                        android:textIsSelectable="true"
+                        android:focusable="false">
+                    </EditText>
+
+                    <Button android:text="Select"
+                        android:id="@+id/Button_financecompany"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </Button>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:text="Approval Code"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText
+                        android:id="@+id/approvalcode"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:inputType="textCapCharacters"
+                        android:text=""
+                        android:maxLines="1"/>
+
+                    <Button android:text="Get DO"
+                        android:id="@+id/Button_getfinancedo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </Button>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/ModelNolbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Finance Product"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/ModelNo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#d40909"
+                        android:inputType="numberDecimal"
+                        android:gravity="right"
+                        android:textSize="18dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/loandtlbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DATE"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <TextView android:id="@+id/loandt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#d40909"
+                        android:textSize="18dp"
+                        android:gravity="center"
+                        android:inputType="none"
+                        android:textIsSelectable="true"
+                        android:focusable="false"
+                        android:onClick="setloandt"/>
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:id="@+id/loanamtlbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loan Amount "
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/loanamt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#d40909"
+                        android:inputType="numberDecimal"
+                        android:gravity="right"
+                        android:textSize="18dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/noofmonthlbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tenor (In Month)"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/noofmonth"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#d40909"
+                        android:inputType="number"
+                        android:gravity="right"
+                        android:textSize="18dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/upfrontemilbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Upfront EMI"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/upfrontemi"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#d40909"
+                        android:inputType="number"
+                        android:gravity="right"
+                        android:textSize="18dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/emipermonthlbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EMI/Month"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/emipermonth"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#d40909"
+                        android:gravity="right"
+                        android:textSize="18dp"
+                        android:inputType="none"
+                        android:textIsSelectable="true"
+                        android:focusable="false"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/processingfeelbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Processing Fee"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/processingfee"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#d40909"
+                        android:inputType="numberDecimal"
+                        android:gravity="right"
+                        android:textSize="18dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cardchargeslbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Card Charge"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/cardcharges"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#d40909"
+                        android:inputType="numberDecimal"
+                        android:gravity="right"
+                        android:textSize="18dp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <CheckBox android:id="@+id/dbdoncustomer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DBD By Customer"
+                        android:gravity="right"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/dbdamountlbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DBD Amount"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/dbdamount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#d40909"
+                        android:inputType="numberDecimal"
+                        android:gravity="right"
+                        android:textSize="18dp"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/cashbacklbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cash Back"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/cashback"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#d40909"
+                        android:inputType="numberDecimal"
+                        android:gravity="right"
+                        android:textSize="18dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/totalupfrontlbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Upfront Amount"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/totalupfront"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#d40909"
+                        android:gravity="right"
+                        android:textSize="18dp"
+                        android:inputType="none"
+                        android:textIsSelectable="true"
+                        android:focusable="false"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/disbursementamtlbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Disbursement Amount"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/disbursementamt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#d40909"
+                        android:inputType="none"
+                        android:textIsSelectable="true"
+                        android:focusable="false"
+                        android:gravity="right"
+                        android:textSize="18dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- SECTION 2: Customer Address and PAN -->
+        <!-- SECTION 1: Finance Details -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <!-- Rounded Header inside Card -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_header_bg"
+                android:text="Customer Details"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="16sp"/>
+
+            <!-- Content Area -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/CustomerPhoneNolbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Mobile"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/CustomerPhoneNo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:inputType="phone"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/alternamemobilenolbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Alternate Mobile"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/alternamemobileno"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:inputType="phone"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/CustomerFirstNamelbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer First Name"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/CustomerFirstName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/CustomerMiddleNamelbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Middle Name"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/CustomerMiddleName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/CustomerLastNamelbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Last Name"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/CustomerLastName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/AddressLine1lbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address Line 1"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/AddressLine1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/AddressLine2lbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address Line 2"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/AddressLine2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/AddressLine3lbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address Line 3"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/AddressLine3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/CITYlbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/CITY"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/STATElbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="State"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/STATE"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/Arealbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Area"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/Area"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/Landmarklbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Landmark"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/Landmark"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/PinCodelbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pincode"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/PinCode"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/customerGSTINlbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer GSTIN"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/customerGSTIN"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/CustomerEmailIDlbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Email ID"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/CustomerEmailID"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/CustomerPANlbl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer PAN"
+                    android:maxLines="1"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText android:id="@+id/CustomerPAN"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left" />
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- SECTION 3: Delivery Address -->
+        <!-- SECTION 1: Finance Details -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <!-- Rounded Header inside Card -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_header_bg"
+                android:text="Delivery Details"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="16sp"/>
+
+            <!-- Content Area -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address" />
+
+                <EditText
+                    android:id="@+id/delivery_address1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:hint=""
+                    android:text=""
+                    android:maxLines="2"
+                    android:inputType="textCapCharacters"/>
+
+                <EditText
+                    android:id="@+id/delivery_address2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:hint=""
+                    android:text=""
+                    android:maxLines="2"
+                    android:inputType="textCapCharacters"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="City" />
+
+                <EditText
+                    android:id="@+id/delivery_address3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:hint=""
+                    android:text=""
+                    android:maxLines="2"
+                    android:inputType="textCapCharacters"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Landmark" />
+
+                <EditText
+                    android:id="@+id/delivery_address4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:hint=""
+                    android:text=""
+                    android:maxLines="2"
+                    android:inputType="textCapCharacters"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Pincode" />
+
+                <EditText
+                    android:id="@+id/delivery_pincode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:hint=""
+                    android:text=""
+                    android:maxLines="1"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="GSTN" />
+
+                <EditText
+                    android:id="@+id/delivery_gstn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:hint=""
+                    android:text=""
+                    android:maxLines="1"/>
+
+            </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- SECTION 4: Brand/Model Selection -->
+        <!-- SECTION 1: Finance Details -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <!-- Rounded Header inside Card -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_header_bg"
+                android:text="Product Details"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="16sp"/>
+
+            <!-- Content Area -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Brand Name" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+                    <EditText android:text=""
+                        android:id="@+id/brandname"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent"
+                        android:inputType="none"
+                        android:textIsSelectable="true"
+                        android:focusable="false">
+                    </EditText>
+                    <Button android:text="Select"
+                        android:id="@+id/Button_brandname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </Button>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Model Name" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+                    <EditText android:text=""
+                        android:id="@+id/modelname"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent"
+                        android:inputType="none"
+                        android:textIsSelectable="true"
+                        android:focusable="false">
+                    </EditText>
+                    <Button android:text="Select"
+                        android:id="@+id/Button_modelname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </Button>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Quantity" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText
+                        android:id="@+id/quantity"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent"
+                        android:inputType="number"
+                        android:gravity="right"
+                        android:text="1">
+                    </EditText>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Unit Rate" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent">
+
+                    <EditText
+                        android:id="@+id/unitprice_include_tax"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent"
+                        android:inputType="numberDecimal"
+                        android:gravity="right">
+                    </EditText>
+
+
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/login_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="#e30000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+        <!-- Submit Button Outside Cards -->
+        <Button
+            android:id="@+id/btnCreateFinance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Create Customer / Order / Finance"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_margin="16dp"/>
+    </LinearLayout>
+</ScrollView>

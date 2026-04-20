@@ -1,0 +1,1278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.shrikantelectronics">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+
+
+    <!-- For video -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <!-- For audio -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:targetApi="30"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" tools:targetApi="33"/>
+
+
+
+    <permission
+        android:name="android.permission.FLASHLIGHT"
+        android:label="@string/app_name"
+
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <!-- Optional full storage (only if needed) -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".GlobalClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true">
+
+        <!-- FileProvider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".Event_Visitor"
+            android:label="Event Visitor" />
+        <activity
+            android:name=".Registration"
+            android:label="Application Registration" />
+        <activity
+            android:name=".BarcodeScanner"
+            android:label="Barcode Scanner" />
+        <activity
+            android:name=".FullscreenActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DayBook"
+            android:label="Day Book"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".login"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="true"
+            android:label="Svayam Payment Getway" />
+        <activity
+            android:name=".PaymentSuccessfullActivity"
+            android:exported="true"
+            android:label="Svayam Response" />
+        <activity
+            android:name=".Order_Pending_For_SerialNo_view"
+            android:label="@string/title_activity_order"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".serial_view"
+            android:label="Search Product Serial"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".TransferSerial_view"
+            android:label="My Pending Transfer Receipt"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Quotation_view"
+            android:label="Quotation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SalesmenGetFinanceDO"
+            android:label="Get Finance DO"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".EmployeeDocuments"
+            android:label="My Documents" />
+        <activity
+            android:name=".GalaryImageActivity"
+            android:label="Pick From Galary" />
+        <activity
+            android:name=".StockVerificationCustomerType_view"
+            android:label="Select Lead Type"
+            android:parentActivityName=".SalesmenCreateCustomer">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesOrder" />
+        </activity>
+        <activity
+            android:name=".StockVerificationCustomerPriority_view"
+            android:label="Select Priority"
+            android:parentActivityName=".SalesmenCreateCustomer">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesOrder" />
+        </activity>
+        <activity
+            android:name=".ViewEmployeeTask"
+            android:label="Update Daliy Task"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".serial_view_single"
+            android:label="Search Product Serial"
+            android:parentActivityName=".serial_view">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.serial_view" />
+        </activity>
+        <activity
+            android:name=".TransferStockReceipt"
+            android:label="Stock Reciept"
+            android:parentActivityName=".TransferSerial_view">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.TransferSerial_view" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".confirmdeliveryreceipt"
+            android:label="Delivery Confirmation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".confirmdelivery_view"
+            android:label="Delivery Confirmation"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".customer_view"
+            android:label="Customers"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Customer_Ledger_View"
+            android:label="Customer Ledger"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".FA_Account_Ledger"
+            android:label="Account Ledger"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".FA_Account_Ledger_View"
+            android:label="Account Ledger"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".LocationStockSummery_List"
+            android:label="Monthly Stock Movement"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".CrmActivity_Daily"
+            android:label="@string/title_activity_Crm"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".AttendanceImageActivity"
+            android:label="" />
+
+        <activity
+            android:name=".DeliveryReceiptImageActivity"
+            android:label="" />
+
+        <activity
+            android:name=".LocationStockSummery_Daily_List"
+            android:label="Daily Stock Movement"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".CreateCustomer"
+            android:label="Create Customer"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".CrmActivityFollowup_Customer_Single"
+            android:label="Walk-In Followup"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".CreateCustomerComplaint"
+            android:label="Create Complaints"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".CrmActivityComplaintCustomerProduct"
+            android:label="Customer Product History"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".customer_view_single" />
+        <activity
+            android:name=".model_view"
+            android:label="Model List"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".model_view_single"
+            android:label="Model Details"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".model_view_ledger"
+            android:label="Model Ledger"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".model_view_seriallist"
+            android:label="Model Serial List"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity android:name=".ReceiptActivity" />
+        <activity android:name=".OutboxActivity" />
+        <activity android:name=".IncentiveCalculatorActivity" />
+        <activity
+            android:name=".SalesActivity"
+            android:label="@string/title_activity_Sales"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Customer_Giftcard_Ledger_View"
+            android:label="Customer Ledger"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".PurchaseActivity"
+            android:label="@string/title_activity_Purchase" />
+        <activity
+            android:name=".PurchaseInvoice_view"
+            android:label="@string/title_activity_Purchase" />
+        <activity
+            android:name=".SalesAnalysisEvent"
+            android:label="@string/title_activity_Sales"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SalesAnalysisEvent_Brand"
+            android:label="@string/title_activity_Sales"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SalesAnalysisEvent_Brand_Category"
+            android:label="@string/title_activity_Sales"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SalesAnalysisEvent_Category"
+            android:label="@string/title_activity_Sales"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SalesAnalysisEvent_Location"
+            android:label="@string/title_activity_Sales"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SalesAnalysisEvent_Location_Brand"
+            android:label="@string/title_activity_Sales"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SalesAnalysisEvent_Location_Category"
+            android:label="@string/title_activity_Sales"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SalesAnalysisEvent_Category_Brand"
+            android:label="@string/title_activity_Sales"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SalesAnalysisLocation"
+            android:label="@string/title_activity_Sales" />
+        <activity
+            android:name=".SalesAnalysisLocation_Category"
+            android:label="@string/title_activity_Sales_Category" />
+        <activity
+            android:name=".SalesAnalysisLocation_Brand"
+            android:label="@string/title_activity_Sales_brand" />
+        <activity
+            android:name=".SalesAnalysisBrand"
+            android:label="@string/title_activity_Sales" />
+        <activity
+            android:name=".SalesAnalysisCategory"
+            android:label="@string/title_activity_Sales" />
+        <activity
+            android:name=".SalesAnalysisBrand_Category"
+            android:label="@string/title_activity_Sales" />
+        <activity
+            android:name=".SalesAnalysisCategoryBrand_Invoice"
+            android:label="@string/title_activity_Sales"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SalesAnalysisCategory_Brand"
+            android:label="@string/title_activity_Sales" />
+        <activity
+            android:name=".PurchaseAnalysisBrand"
+            android:label="@string/title_activity_Purchase" />
+        <activity
+            android:name=".PurchaseAnalysisCategory"
+            android:label="@string/title_activity_Purchase" />
+        <activity
+            android:name=".PurchaseAnalysisBrand_Category"
+            android:label="@string/title_activity_Purchase" />
+        <activity
+            android:name=".PurchaseAnalysisCategory_Brand"
+            android:label="@string/title_activity_Purchase" />
+        <activity
+            android:name=".PurchaseAnalysisLocation"
+            android:label="@string/title_activity_Purchase" />
+        <activity
+            android:name=".PurchaseAnalysisLocation_Category"
+            android:label="@string/title_activity_Purchase" />
+        <activity
+            android:name=".PurchaseAnalysisLocation_Brand"
+            android:label="@string/title_activity_Purchase" />
+        <activity
+            android:name=".SalesActivity_Daily_Negetive"
+            android:label="@string/title_activity_Negetive_Sales"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SalesActivity_Delivery_Pending"
+            android:label="Delivery Pending Invoices"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SalesActivity_Task_Pending"
+            android:label="Order Pending"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SalesActivity_Daily_Invoices"
+            android:label="@string/title_activity_Invoices_Sales" />
+        <activity
+            android:name=".StockActivityLocation"
+            android:label="@string/title_activity_Stock" />
+        <activity
+            android:name=".StockActivityCategory"
+            android:label="@string/title_activity_Stock" />
+        <activity
+            android:name=".OutstandingCustomerActivity"
+            android:label="@string/title_activity_Customer_Outstanding"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".OutstandingLocationFinanceActivity"
+            android:label="@string/title_activity_Finance_Location_Outstanding" />
+        <activity
+            android:name=".OutstandingLocationActivity"
+            android:label="@string/title_activity_Customer_Outstanding" />
+        <activity
+            android:name=".OutstandingSupplierActivity"
+            android:label="@string/title_activity_Supplier_Outstanding"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Outstanding_finance"
+            android:label="@string/title_activity_Finance_Outstanding" />
+        <activity
+            android:name=".Outstanding_Finance_View"
+            android:label="@string/title_activity_Finance_Outstanding"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".StockActivityLocationCategory_Model"
+            android:label="@string/title_activity_Stock"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".StockActivityLocationCategory_Brand"
+            android:label="@string/title_activity_Stock"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".StockActivityLocationCategory_Brand_Model"
+            android:label="@string/title_activity_Stock"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".StockActivityLocationBrand_Model"
+            android:label="@string/title_activity_Stock"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".StockActivityLocationBrand_Category_Model"
+            android:label="@string/title_activity_Stock"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".StockActivityLocationCategory"
+            android:label="@string/title_activity_Stock"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".StockActivityLocationBrand_Category"
+            android:label="@string/title_activity_Stock"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SalesActivity_Daily"
+            android:label="@string/title_activity_Sales"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".PurchaseActivity_Daily"
+            android:label="@string/title_activity_Purchase"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".StockActivityLocationBrand"
+            android:label="@string/title_activity_Stock"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".StockActivityBrand"
+            android:label="@string/title_activity_Stock" />
+        <activity
+            android:name=".StockNegetiveSummery"
+            android:label="@string/title_activity_Negetive_Stock"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".StockActivityCategory_Brand"
+            android:label="@string/title_activity_Stock" />
+        <activity
+            android:name=".StockActivityBrand_Category"
+            android:label="@string/title_activity_Stock" />
+        <activity
+            android:name=".ProfitabilityActivity"
+            android:label="Profitability" />
+        <activity
+            android:name=".ProfitabilityActivityBrand"
+            android:label="Brand Profitability" />
+        <activity
+            android:name=".ProfitabilityActivityLocationCategory_Model"
+            android:label="Profitability Location Category"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ProfitabilityActivityLocationCategory_Brand"
+            android:label="Profitability Category/Brand"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ProfitabilityActivityLocationCategory_Brand_Model"
+            android:label="Profitability Category/Brand"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ProfitabilityActivityLocationBrand_Model"
+            android:label="Profitability"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ProfitabilityActivityLocationBrand_Category_Model"
+            android:label="Profitability"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ProfitabilityActivityLocationCategory"
+            android:label="Profitability"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ProfitabilityActivityLocationBrand_Category"
+            android:label="Profitability Brand/Category"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ProfitabilityActivityLocationBrand"
+            android:label="Profitability Brand"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Profitability_Invoice_List"
+            android:label="Profitability Invoice List" />
+        <activity
+            android:name=".ProfitabilityActivityLocation"
+            android:label="Profitability Location" />
+        <activity
+            android:name=".ProfitabilityActivityCategory"
+            android:label="Profitability Category" />
+        <activity
+            android:name=".ProfitabilityActivityCategory_Brand"
+            android:label="Profitability Category/Brand" />
+        <activity
+            android:name=".ProfitabilityActivityBrand_Category"
+            android:label="Profitability Brand/Category" />
+        <activity
+            android:name=".CustomerActivity"
+            android:label="@string/title_activity_Customer" />
+        <activity
+            android:name=".StockAgeingSummery"
+            android:label="@string/title_activity_Cagegory" />
+        <activity
+            android:name=".StockSummaryAgeing_Category_ListViewTab"
+            android:label="@string/title_activity_Cagegory" />
+        <activity
+            android:name=".StockAgeing_Category"
+            android:label="@string/title_activity_Cagegory" />
+        <activity
+            android:name=".StockSummaryAgeing_Brand_ListViewTab"
+            android:label="@string/title_activity_Brand" />
+        <activity
+            android:name=".StockAgeing_Brand"
+            android:label="@string/title_activity_Brand" />
+        <activity
+            android:name=".StockSummaryAgeing_Model_ListViewTab"
+            android:label="@string/title_activity_Model" />
+        <activity
+            android:name=".StockAgeing_Model"
+            android:label="@string/title_activity_Model" />
+        <activity
+            android:name=".SchemeStatus"
+            android:label="@string/title_Supplier_Scheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SchemePurchaseList"
+            android:label="@string/title_Supplier_Scheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ComplaintsActivity" />
+        <activity android:name=".CrmActivityComplaints" />
+        <activity android:name=".CrmActivityFollowup_Complaint_Single" />
+        <activity android:name=".CrmActivityComplaintsRegister" />
+        <activity android:name=".CrmActivityLeadsRegister" />
+        <activity android:name=".CreateCustomer_Edit" />
+        <activity android:name=".RecoveryActivity" />
+        <activity android:name=".StockSummaryAgeingListViewTab" />
+        <activity android:name=".CrmActivity" />
+        <activity android:name=".CrmActivityEmployee" />
+        <activity android:name=".CrmTabAndListView" />
+        <activity android:name=".CrmActivityDemo" />
+        <activity android:name=".CrmActivityInstallation" />
+        <activity
+            android:name=".CrmActivityLeads"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".CrmActivityDamage" />
+        <activity android:name=".CrmActivityEmployeeStatus" />
+        <activity
+            android:name=".SalesPerformance_view"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SalesSummaryListViewTab"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SalesSummery_Brand"
+            android:label="Brand Sales Summery" />
+        <activity
+            android:name=".SalesSummery_Category"
+            android:label="Category Sales Summery" />
+        <activity
+            android:name=".SalesSummery_Model"
+            android:label="Model Sales Summery" />
+        <activity
+            android:name=".SalesSummery_Customer"
+            android:label="Customer Sales Summery" />
+        <activity android:name=".ProfileActivity" />
+        <activity
+            android:name=".LedgerActivity"
+            android:label="Ledger" />
+        <activity
+            android:name=".supplier_view"
+            android:label="Supplier"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Supplier_Ledger_View"
+            android:label="Supplier Ledger"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".supplier_view_single" />
+        <activity
+            android:name=".maincash_view"
+            android:label="Collection Cash Ledger"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Cash_Ledger_View"
+            android:label="Collection Cash Ledger"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Ledger_finance"
+            android:label="Finance Ledger"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Ledger_Finance_View"
+            android:label="Finance Ledger"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Ledger_CreditCard"
+            android:label="Credit Card Ledger"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Ledger_CreditCard_View"
+            android:label="Credit Card Ledger"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SalesComparision_Category"
+            android:label="Sales Compariosion Cagegory"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SalesComparision_Brand"
+            android:label="Sales Compariosion Brand"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".EmployeeActivity"
+            android:label="Employee"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".EmployeeAttendanceCreate"
+            android:label="Employee Attendance"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".EmployeeAttendanceReport"
+            android:label="Attendance Report"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".EmployeeAttendanceReportDaily"
+            android:label="Employee Daily Attendance Report"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".EmployeeAttendanceDetailSingle"
+            android:label="Employee Daily Attendance Report"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".EmployeeAttendanceEscallationReport"
+            android:label="Attendance Escallation Report"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SalesComparision_Location"
+            android:label="Sales Compariosion Location"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".StockActivityAgeingLocationBrand"
+            android:label="Brand Ageing Stock"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".StockActivityAgeingLocationCategory"
+            android:label="Category Ageing Stock"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".CrmActivityFollowup_Single"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".pendingdelivery_view"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".CrmActivity_Installation_Allocation"
+            android:screenOrientation="landscape" />
+        <activity android:name=".CrmActivity_Installation_Allocation_Single" />
+        <activity
+            android:name=".CrmActivity_Recovery_Allocation"
+            android:screenOrientation="landscape" />
+        <activity android:name=".CrmActivity_Recovery_Allocation_Single" />
+        <activity
+            android:name=".deliveryreceipt"
+            android:label="Delivery Receipt"
+            android:parentActivityName=".pendingdelivery_view">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.pendingdelivery_view" />
+        </activity>
+        <activity
+            android:name=".UploadActivity"
+            android:label="Upload To Server"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".StockActivityAgeingLocationModel"
+            android:label="Model Ageing Stock"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SalesOrder_add_model"
+            android:label="Select Model"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Order_add_model_serial"
+            android:label="Select Serial Number"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Salesmen_Customer_Search"
+            android:label="Walk-In"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SalesmenCreateCustomer"
+            android:label="Create Walk-In"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Salesmen_Followup_Customer_Single"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SalesOrdernmodel_view"
+            android:label="Select Model"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Location_view"
+            android:label="Select Location"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Invoice_view"
+            android:label="@string/title_activity_invoice"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Invoice_view_single"
+            android:label="@string/title_activity_invoice"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Order_view"
+            android:label="@string/title_activity_order"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".OrderApprovalPending_view"
+            android:label="Approval Pending Orders"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".OrderApprovalPending_view_single"
+            android:label="SLC Approval"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".OrderApprovalPending_view_cod"
+            android:label="COD Approval"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".OrderApprovalPending_view_srn"
+            android:label="Sales Return Approval"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".OrderDeliveryPending_view"
+            android:label="Delivery Pending Orders"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".OrderDeliveryPending_view_single"
+            android:label="Order Pending For Delivery"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Order_view_single"
+            android:label="@string/title_activity_order"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".KPIActivity"
+            android:label="@string/title_activity_kpi"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".KPIActivity_Details_Brand"
+            android:label="@string/title_activity_kpi"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".KPIActivity_Details_Brand_Category"
+            android:label="@string/title_activity_kpi"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".KPIActivity_Details_Brand_Category_Location"
+            android:label="@string/title_activity_kpi"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".KPIActivity_Details_Category"
+            android:label="@string/title_activity_kpi"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".KPIActivity_Details_Category_Brand"
+            android:label="@string/title_activity_kpi"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".KPIActivity_Details_Location"
+            android:label="@string/title_activity_kpi"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".B2BActivity"
+            android:label="B2B"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DealerSchemeStatus"
+            android:label="Dealer Scheme" />
+        <activity
+            android:name=".StockVerification"
+            android:label="Stock Verification" />
+        <activity
+            android:name=".Procurement"
+            android:label="Purchase"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Procurement_Model_Create"
+            android:label="Create New Model"
+            android:parentActivityName=".Procurement">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Procurement" />
+        </activity>
+        <activity
+            android:name=".ProcurementSupplier_view"
+            android:label="Select Supplier"
+            android:parentActivityName=".Procurement">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Procurement" />
+        </activity>
+        <activity
+            android:name=".ProcurementModelSerial"
+            android:label="Add Serial And Sticker"
+            android:parentActivityName=".Procurement"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Procurement" />
+        </activity>
+        <activity
+            android:name=".StockVerificationTopCategory_view"
+            android:label="Select Top Category"
+            android:parentActivityName=".StockVerification">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.StockVerification" />
+        </activity>
+        <activity
+            android:name=".TransferActivity"
+            android:label="Transfer" />
+        <activity
+            android:name=".TransferStock"
+            android:label="Stock Transfer"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".StockVerificationParentCategory_view"
+            android:label="Select Parent Category"
+            android:parentActivityName=".StockVerification">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.StockVerification" />
+        </activity>
+        <activity
+            android:name=".CustomerComplaint_Product_Activity"
+            android:label="Search Customer Product"
+            android:parentActivityName=".CreateCustomerComplaint">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.CreateCustomerComplaint" />
+        </activity>
+        <activity
+            android:name=".StockVerificationProductCategory_view"
+            android:label="Select Product Category"
+            android:parentActivityName=".StockVerification">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.StockVerification" />
+        </activity>
+        <activity
+            android:name=".SalesAnalysisB2BCustomer"
+            android:label="B2B Customer Sales Summary"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".B2BOutstandingLocationActivity"
+            android:label="Ageing Outstanding"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".B2BOutstandingCustomerActivity"
+            android:label="Outstanding Invoice Details"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".B2BOutstandingCustomerInvoiceActivity"
+            android:label="Customer Invoice Outstanding"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".CrmActivityCOD_Register"
+            android:label="COD Register"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".CrmActivityCOD_Single"
+            android:label="Customer COD Details"
+            android:parentActivityName=".CrmActivityCOD_Register"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.CrmActivityCOD_Register" />
+        </activity>
+        <activity
+            android:name=".CrmActivityPDCCheque_Register"
+            android:label="PDC Cheque Register"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".CrmActivityPDCCheque_Single"
+            android:label="Customer PDC Details"
+            android:parentActivityName=".CrmActivityPDCCheque_Register"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.CrmActivityPDCCheque_Register" />
+        </activity>
+        <activity
+            android:name=".FinanceRecoveryScheduleActivity"
+            android:label="Finance Recovery Schedule"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".customer_view_single_for_loan"
+            android:label="Customer Finance Details"
+            android:parentActivityName=".customer_view_single_for_loan"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.FinanceRecoveryScheduleActivity" />
+        </activity>
+        <activity
+            android:name=".Salesmen_SalesOrder"
+            android:label="Sales"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".Salesmen_SalesOrderModelSerial"
+            android:label="Add Serial And Sticker"
+            android:parentActivityName=".Salesmen_SalesOrder"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesOrder" />
+        </activity>
+        <activity
+            android:name=".StockVerificationFinance_view"
+            android:label="Select Finance Company"
+            android:parentActivityName=".Salesmen_SalesOrder">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesOrder" />
+        </activity>
+
+        <activity
+            android:name=".StockVerificationFinanceForAPI_view"
+            android:label="Select Finance Company"
+            android:parentActivityName=".SalesmenGetFinanceDO">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.SalesmenGetFinanceDO" />
+        </activity>
+
+
+
+
+        <activity
+            android:name=".StockVerificationTidMaster_view"
+            android:label="Select Tid Master"
+            android:parentActivityName=".Salesmen_SalesOrder">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesOrder" />
+        </activity>
+        <activity
+            android:name=".StockVerificationState_view"
+            android:label="Select State"
+            android:parentActivityName=".Salesmen_SalesOrder">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesOrder" />
+        </activity>
+        <activity
+            android:name=".StockVerificationEmployee_view"
+            android:label="Select Store Manager"
+            android:parentActivityName=".Salesmen_SalesOrder">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesOrder" />
+        </activity>
+        <activity
+            android:name=".StockVerificationPaymentMode_view"
+            android:label="Select Payment Mode"
+            android:parentActivityName=".Salesmen_SalesOrder">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesOrder" />
+        </activity>
+        <activity
+            android:name=".StockVerificationBrand_view"
+            android:label="Select Brand"
+            android:parentActivityName=".Salesmen_SalesOrder">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesOrder" />
+        </activity>
+        <activity
+            android:name=".StockVerificationTransporter_view"
+            android:label="Select Transporter"
+            android:parentActivityName=".Salesmen_SalesOrder">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesOrder" />
+        </activity>
+        <activity
+            android:name=".StockVerificationSerial_view"
+            android:label="Select Serial Number"
+            android:parentActivityName=".TransferStock">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.TransferStock" />
+        </activity>
+        <activity
+            android:name=".Service_Call_Status_Summary"
+            android:label="Service Call Summary" />
+        <activity
+            android:name=".Service_Call_Service_Center_Summary"
+            android:label="Service Center Summary"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Service_Call_Dealer_Summary"
+            android:label="Dealer Center Summary"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Service_Call_Status_Register"
+            android:label="Call Register"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".GeneralCodeFollowupMode_view"
+            android:label="Followup Mode" />
+
+        <activity
+            android:name=".SalesAnalysisCategoryBrand_Model"
+            android:label="@string/title_activity_Sales"/>
+
+
+        <activity
+            android:name=".PurchaseAnalysisCategoryBrand_Model"
+            android:label="Purchase Model"/>
+
+        <activity
+            android:name=".GeneralCodeFollowupPurpose_view"
+            android:label="Followup Purpose" />
+        <activity
+            android:name=".ServiceCallDocumentImageActivity"
+            android:label="Call Images And Documents"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Salesmen_SalesQuotationModel"
+            android:label="Quotation Model Details"
+            android:parentActivityName=".Salesmen_SalesQuotation"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesQuotation" />
+        </activity>
+        <activity
+            android:name=".Salesmen_SalesQuotation"
+            android:label="Quotation"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".StockVerificationModel_view"
+            android:label="Select Model"
+            android:parentActivityName=".Salesmen_SalesOrder">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesOrder" />
+        </activity>
+        <activity
+            android:name=".StockVerificationLocation_view"
+            android:label="Select Location"
+            android:parentActivityName=".Salesmen_SalesOrder">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesOrder" />
+        </activity>
+        <activity
+            android:name=".SalesOrderReceipt_Finance_Activity"
+            android:label="Sales Order Finance" />
+        <activity
+            android:name=".SalesOrderReceipt_Outstanding_Activity"
+            android:label="Cash On Delivery (Outstanding)" />
+        <activity
+            android:name=".SalesOrderReceipt_Cash_Activity"
+            android:label="Sales Order Cash" />
+        <activity
+            android:name=".SalesOrderReceipt_Bank_Activity"
+            android:label="Sales Order Bank" />
+        <activity
+            android:name=".SalesOrderReceipt_Card_Activity"
+            android:label="Sales Order Card" />
+        <activity
+            android:name=".SalesOrderReceipt_Wallet_Activity"
+            android:label="Sales Order Wallet" />
+        <activity
+            android:name=".StockVerificationWallet_view"
+            android:label="Select Wallet"
+            android:parentActivityName=".Salesmen_SalesOrder">
+            <meta-data
+                android:name="androidx.core.app.NavUtils.PARENT_ACTIVITY"
+                android:value="com.shrikantelectronics.Salesmen_SalesOrder" />
+        </activity>
+        <activity
+            android:name=".FA_Profit_LossAC"
+            android:label="Profit And Loss Statement" />
+        <activity
+            android:name=".FA_TrialBalance"
+            android:label="Trial Balance" />
+        <activity
+            android:name=".FA_TradingAccount"
+            android:label="Trading Account Statement" />
+        <activity
+            android:name=".FA_BalanceSheet"
+            android:label="Balance Sheet" />
+        <activity
+            android:name=".FA_VoucherStatistics"
+            android:label="Voucher Statistics" />
+        <activity
+            android:name=".FA_GroupSummary"
+            android:label="Group Summary" />
+        <activity
+            android:name=".FA_LedgerMonthSummary"
+            android:label="Monthly Summary" />
+        <activity
+            android:name=".FA_LedgerwiseBalance"
+            android:label="Ledger-wise Balance" />
+        <activity
+            android:name=".FA_LedgerMonthList"
+            android:label="Ledger Vouchers" />
+        <activity
+            android:name=".SvayamComplaint"
+            android:label="Svayam Complaint" />
+        <activity
+            android:name=".SvayamCreateComplaint"
+            android:label="Svayam Create Complaint" />
+        <activity
+            android:name=".SvayamComplaintDocumentImageActivity"
+            android:label="Svayam Create Complaint" />
+        <activity
+            android:name=".SvayamGeneralCodes_view"
+            android:label="Select" />
+
+        <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/slogojpg" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+
+ <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCouHOVqCbKnIzZ3ryuIc40HWFf_qStMrM" />
+        -->
+        <activity
+            android:name=".MapActivity"
+            android:label="Your Sales On Map"
+            android:windowSoftInputMode="stateHidden" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCouHOVqCbKnIzZ3ryuIc40HWFf_qStMrM" />
+
+        <activity
+            android:name=".MarkerDemoActivity"
+            android:label="@string/title_activity_maps" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service
+            android:name=".AlarmService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".ServiceAutoLauncher"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name=".sync_app_settings.StubContentProvider"
+            android:authorities="@string/content_authority"
+            android:exported="false"
+            android:syncable="true" />
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_mMhNMcYvIs95FY" />
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
+        <service
+            android:name=".sync_app_settings.SyncAdapterService"
+            android:exported="true"
+            android:process=":sync">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+        <service android:name=".sync_app_settings.StubAuthenticatorService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".SalesReportActivity"></activity>
+    </application>
+
+</manifest>

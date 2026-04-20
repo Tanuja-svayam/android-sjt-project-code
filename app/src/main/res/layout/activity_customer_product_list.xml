@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <TextView
+        android:id="@+id/parentcategoryname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:typeface="sans"
+        android:textSize="15dip"
+        android:textColor="#040404"
+        android:textStyle="bold"/>
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/invoiceno_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parentcategoryname"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Invoice No. : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/invoiceno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parentcategoryname"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <!-- Invoice Date -->
+    <TextView
+        android:id="@+id/invoicedt_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invoiceno_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Invoice Date : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/invoicedt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invoiceno"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+
+    <TextView
+        android:id="@+id/brandname_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invoicedt_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Brand : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/brandname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invoicedt"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/modelname_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/brandname_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Model : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/modelname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/brandname"
+        android:textColor="#343434"
+
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"
+        android:ellipsize="none"
+        android:scrollHorizontally="false"/>
+
+    <TextView
+        android:id="@+id/categoryname_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/modelname_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Sub-Category : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/categoryname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/modelname"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/serialno_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoryname_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Serial No : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/serialno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoryname"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+
+    <TextView
+        android:id="@+id/netamt_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/serialno_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Invoice Amount : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/netamt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/serialno"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/manufacturer_warranty_tenure_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/netamt_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Warranty Months : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/manufacturer_warranty_tenure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/netamt"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/warranty_start_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/manufacturer_warranty_tenure_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Warranty From : "/>
+
+    <TextView
+        android:id="@+id/warranty_start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/manufacturer_warranty_tenure"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/warranty_end_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/warranty_start_date_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Warranty Upto : "/>
+
+    <TextView
+        android:id="@+id/warranty_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/warranty_start_date"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

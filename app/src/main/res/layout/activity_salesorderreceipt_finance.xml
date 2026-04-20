@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:label="@string/app_name">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Finance" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/financecompany"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false">
+            </EditText>
+
+            <Button android:text="Select"
+                android:id="@+id/Button_financecompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/loandtlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="DATE"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <TextView android:id="@+id/loandt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#d40909"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false"
+                android:onClick="setloandt"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:text="Approval Code"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/approvalcode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:inputType="textCapCharacters"
+                android:text=""
+                android:maxLines="1"/>
+
+            <Button android:text="Get DO"
+                android:id="@+id/Button_getfinancedo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/loanamtlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Loan Amount "
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText android:id="@+id/loanamt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#d40909"
+                android:inputType="numberDecimal"
+                android:gravity="right"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/noofmonthlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Tenor (In Month)"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText android:id="@+id/noofmonth"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#d40909"
+                android:inputType="number"
+                android:gravity="right"
+                android:textSize="18dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/upfrontemilbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Upfront EMI"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText android:id="@+id/upfrontemi"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#d40909"
+                android:inputType="number"
+                android:gravity="right"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/emipermonthlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="EMI/Month"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText android:id="@+id/emipermonth"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#d40909"
+                android:gravity="right"
+                android:textSize="18dp"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/processingfeelbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Processing Fee"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText android:id="@+id/processingfee"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#d40909"
+                android:inputType="numberDecimal"
+                android:gravity="right"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cardchargeslbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Card Charge"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText android:id="@+id/cardcharges"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#d40909"
+                android:inputType="numberDecimal"
+                android:gravity="right"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <CheckBox android:id="@+id/dbdoncustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DBD By Customer"
+                android:gravity="right"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dbdamountlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="DBD Amount"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText android:id="@+id/dbdamount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#d40909"
+                android:inputType="numberDecimal"
+                android:gravity="right"
+                android:textSize="18dp"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/cashbacklbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Cash Back"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText android:id="@+id/cashback"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#d40909"
+                android:inputType="numberDecimal"
+                android:gravity="right"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/totalupfrontlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Upfront Amount"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText android:id="@+id/totalupfront"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#d40909"
+                android:gravity="right"
+                android:textSize="18dp"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/disbursementamtlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Disbursement Amount"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText android:id="@+id/disbursementamt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#d40909"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false"
+                android:gravity="right"
+                android:textSize="18dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/login_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="#e30000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+
+        <Button
+            android:id="@+id/btnCreateFinance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_margin="3dp"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <TextView
+        android:id="@+id/stocklocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:typeface="sans"
+        android:textSize="20dip"
+        android:textColor="#040404"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/op_pendinglabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stocklocation"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Open"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/op_pending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stocklocation"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/op_inprocesslabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/op_pendinglabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="In-Process"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/op_inprocess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/op_pending"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/added_during_monthlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/op_inprocesslabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Added Durring Month"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/added_during_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/op_inprocess"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/cl_currentyearlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/added_during_monthlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Closure Durring Year"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/cl_currentyear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/added_during_month"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/cl_currentmonthlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cl_currentyearlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Closure Durring Month"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/cl_currentmonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cl_currentyear"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/cl_currentmonth"/>
+
+    <TextView
+        android:id="@+id/total_in_open_in_handlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cl_currentmonthlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="In Hand"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/total_in_open_in_hand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cl_currentmonth"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold" />
+</RelativeLayout>

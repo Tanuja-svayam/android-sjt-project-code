@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "727632673207",
+    "project_id": "shrikantelectronics-38500",
+    "storage_bucket": "shrikantelectronics-38500.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727632673207:android:855cf05985c4fcf58d9032",
+        "android_client_info": {
+          "package_name": "com.shrikantelectronics"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTXy4XXwo84IBnJ8hqEHthLhgSKrKfz-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

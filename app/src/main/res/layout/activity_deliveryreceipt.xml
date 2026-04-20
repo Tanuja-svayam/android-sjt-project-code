@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:label="@string/app_name">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/custname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:typeface="sans"
+            android:textSize="15dip"
+            android:textColor="#040404"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/invordernolabel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/custname"
+            android:textColor="#343434"
+            android:textSize="15dip"
+            android:layout_marginTop="1dip"
+            android:text="Invoice No"/>
+
+        <!-- Artist Name -->
+        <TextView
+            android:id="@+id/invorderno"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/custname"
+            android:textColor="#343434"
+            android:textSize="15dip"
+            android:layout_marginTop="1dip"
+            android:layout_toRightOf="@+id/invordernolabel"/>
+
+        <TextView
+            android:id="@+id/topcategorynamelable"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/invorderno"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"
+            android:text="Category"/>
+
+        <TextView
+            android:id="@+id/topcategoryname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/topcategorynamelable"
+            android:layout_below="@id/invorderno"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"/>
+
+        <TextView
+            android:id="@+id/brandnamelable"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topcategoryname"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"
+            android:text="Brand"/>
+
+        <TextView
+            android:id="@+id/brandname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/brandnamelable"
+            android:layout_below="@id/topcategoryname"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"/>
+
+        <TextView
+            android:id="@+id/modelnamelable"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/brandname"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"
+            android:text="Model"/>
+
+        <TextView
+            android:id="@+id/modelname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/modelnamelable"
+            android:layout_below="@id/brandname"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"/>
+
+        <TextView
+            android:id="@+id/serialnolable"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/modelname"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"
+            android:text="Serial No"/>
+
+        <TextView
+            android:id="@+id/serialno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/serialnolable"
+            android:layout_below="@id/modelname"
+            android:gravity="left"
+            android:layout_marginRight="5dip"
+            android:textSize="15dip"
+            android:textColor="#343434"/>
+
+        <TextView
+            android:id="@+id/serialnumberlable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:layout_below="@id/serialno"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Serial Number" />
+
+        <EditText
+            android:id="@+id/scan_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dip"
+            android:layout_below="@id/serialnumberlable"
+            android:text=""
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/scan_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:layout_below="@id/scan_content"
+            android:text="Scan"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/btnCreateInvoice"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:text="Create Invoice"
+            android:textColor="@color/white"
+            android:layout_below="@id/scan_button"
+            android:layout_marginTop="2dip"/>
+
+        <Button
+            android:id="@+id/btnShowInvoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:text="View Invoice"
+            android:onClick="download_invoice"
+            android:layout_below="@id/btnCreateInvoice"
+            android:layout_marginTop="2dip" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:layout_below="@id/btnShowInvoice"
+            android:background="?attr/colorPrimary"
+            android:onClick="submit_click"
+            android:text="Submit"
+            android:textColor="#fff" />
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/tabletoplocationstock"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/btnSubmit"
+            android:stretchColumns="0"></TableLayout>
+
+        <TextView
+            android:id="@+id/login_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip"
+            android:layout_below="@id/tabletoplocationstock"
+            android:textColor="#e30000"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+
+ </ScrollView>

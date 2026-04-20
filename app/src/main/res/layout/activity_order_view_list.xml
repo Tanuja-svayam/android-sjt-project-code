@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+    <!--  ListRow Left sied Thumbnail image -->
+
+    <!-- Title Of Song-->
+    <TextView
+        android:id="@+id/custname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="17dip"
+        android:textStyle="bold"/>
+    <!-- Artist Name -->
+
+    <TextView
+        android:id="@+id/invoicenolabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custname"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:text="@string/invoicenolabel"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/invoiceno"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custname"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/invoicenolabel"/>
+
+
+
+
+
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/vinvoicedtlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invoicenolabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:text="@string/vinvoicedtlabel"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/vinvoicedt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invoicenolabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/vinvoicedtlabel"/>
+
+    <TextView
+        android:id="@+id/netinvoiceamtlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vinvoicedtlabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:text="@string/netinvoiceamtlabel"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/netinvoiceamt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vinvoicedtlabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/netinvoiceamtlabel"/>
+
+    <TextView
+        android:id="@+id/gross_slc_amountlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/netinvoiceamtlabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:text="SLC Amount : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/gross_slc_amount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/netinvoiceamtlabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/gross_slc_amountlabel"/>
+
+    <TextView
+        android:id="@+id/gross_slc_deficitlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gross_slc_amountlabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:text="Inv. SLC Difference : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/gross_slc_deficit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gross_slc_amountlabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/gross_slc_deficitlabel"/>
+
+    <TextView
+        android:id="@+id/approvalreason"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gross_slc_deficitlabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:textStyle="bold"
+        android:layout_marginTop="1dip"/>
+
+</RelativeLayout>

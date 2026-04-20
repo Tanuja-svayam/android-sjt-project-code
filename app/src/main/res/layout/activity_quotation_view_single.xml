@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Customer" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/custname"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="textCapCharacters">
+            </EditText>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Invoice Number" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/invoiceno"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="textCapCharacters">
+            </EditText>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Invoice Date" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/vinvoicedt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="textCapCharacters">
+            </EditText>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Invoice Amount" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/netinvoiceamt"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="numberDecimal">
+            </EditText>
+        </LinearLayout>
+
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tabletoplocationstock">
+        </TableLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Quantity" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent">
+
+                <EditText
+                    android:id="@+id/quantity"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="fill_parent"
+                    android:inputType="number">
+                </EditText>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Unit Rate" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent">
+
+                <EditText
+                    android:id="@+id/unitrate"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="fill_parent"
+                    android:inputType="numberDecimal">
+                </EditText>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Model Name" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent">
+                <EditText android:text=""
+                    android:id="@+id/modelname"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="fill_parent"
+                    android:inputType="textCapCharacters">
+                </EditText>
+                <Button android:text="Add"
+                    android:id="@+id/Button_modelname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Button>
+            </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/add_product"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:onClick="onClick_add_product"
+                android:text="Add Model"
+                android:textColor="#fff"
+                android:layout_marginBottom="5dp"/>
+
+            <Button
+                android:id="@+id/btnCreateInvoice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="Create Invoice"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dip"
+                android:layout_below="@+id/add_product"/>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:text="Show Invoice"
+                android:onClick="download"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/btnCreateInvoice"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

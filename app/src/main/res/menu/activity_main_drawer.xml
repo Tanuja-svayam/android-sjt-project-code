@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_dashboard"
+            android:title="Dashboard" />
+
+        <item
+            android:id="@+id/nav_crm"
+            android:title="CRM" />
+
+        <item
+            android:id="@+id/nav_sales"
+            android:title="Sales" />
+
+        <item
+            android:id="@+id/nav_purchase"
+            android:title="Purchase" />
+        <item
+            android:id="@+id/nav_stock"
+            android:title="Stock" />
+
+        <item
+            android:id="@+id/nav_kpi"
+            android:title="KPI" />
+
+        <item
+            android:id="@+id/nav_gst"
+            android:title="GST" />
+
+        <item
+            android:id="@+id/nav_outstanding"
+            android:title="Outstanding" />
+
+        <item
+            android:id="@+id/nav_ledger"
+            android:title="Ledger" />
+
+
+        <item
+            android:id="@+id/nav_staff"
+            android:title="Employee" />
+
+        <item
+            android:id="@+id/nav_support"
+            android:title="Support" />
+
+    </group>
+</menu>

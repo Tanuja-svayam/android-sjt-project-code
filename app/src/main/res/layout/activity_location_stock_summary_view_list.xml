@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+
+    <TextView
+        android:id="@+id/from_datelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="From Date"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/from_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/to_datelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="To Date"
+        android:layout_below="@id/from_datelabel"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/to_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_below="@id/from_date"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/stocklocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/to_datelabel"
+        android:text=""
+        android:typeface="sans"
+        android:textSize="20dip"
+        android:textColor="#040404"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/op_balquantitylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stocklocation"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Opening Stock"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/op_balquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stocklocation"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/pu_quantitylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/op_balquantitylabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Purchase"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/pu_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/op_balquantity"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/tr_in_quantitylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pu_quantitylabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Transfer In"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/tr_in_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pu_quantity"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/tr_out_quantitylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tr_in_quantitylabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Transfer Out"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/tr_out_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tr_in_quantity"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/sa_out_quantitylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tr_out_quantitylabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Sales Out"
+        android:layout_alignParentLeft="true"/>
+
+
+    <TextView
+        android:id="@+id/sa_out_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tr_out_quantity"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/sa_return_in_quantitylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sa_out_quantitylabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Sales Return"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/sa_return_in_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sa_out_quantity"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/pu_return_out_quantitylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sa_return_in_quantitylabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Purchase Return"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/pu_return_out_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sa_return_in_quantity"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/pu_return_out_quantitylabel"/>
+
+    <TextView
+        android:id="@+id/cl_balquantitylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pu_return_out_quantitylabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Total"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/cl_balquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pu_return_out_quantity"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        />
+
+
+</RelativeLayout>

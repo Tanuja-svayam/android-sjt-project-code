@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/referencecodelbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="INVOICE NUMBER"
+            android:text="INVOICE NUMBER : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/referencecode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="INVOICE NUMBER"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/vactivitydtlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="INVOICE DATE"
+            android:text="INVOICE DATE : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/vactivitydt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="INVOICE DATE"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+
+
+        <TextView
+            android:id="@+id/custnamelbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="PARTY NAME"
+            android:text="PARTY NAME : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/custname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="PARTY NAME"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/modedesclbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="ADDRESS : "
+            android:text="ADDRESS : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/modedesc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="ADDRESS"
+            android:text=""
+            android:maxLines="3"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/contactpersonmobilelbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="MOBILE"
+            android:text="MOBILE : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/contactpersonmobile"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="MOBILE"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/telephonelbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="ALTERNATE CONTACT"
+            android:text="ALTERNATE CONTACT : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/telephone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="ALTERNATE CONTACT"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/emailidlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="EMAIL"
+            android:text="EMAIL : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/emailid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="EMAIL"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/brandnamelbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="BRAND"
+            android:text="BRAND : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/brandname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="BRAND"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/modelnamelbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="MODEL"
+            android:text="MODEL : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/modelname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="MODEL"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/serialnolbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="SERIAL NUMBER"
+            android:text="SERIAL NUMBER : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/serialno"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="SERIAL NUMBER"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/salesmenlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="SALESMEN"
+            android:text="SALESMEN : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/salesmen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="SALESMEN"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/locationlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="LOCATION"
+            android:text="LOCATION : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="LOCATION"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/vfollowupdtlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="INSTALLATION DATE"
+            android:text="INSTALLATION DATE : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/vfollowupdt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="INSTALLATION DATE"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/employeenamelbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="ALLOCATED TO"
+            android:text="ALLOCATED TO : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/employeename"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="ALLOCATED TO"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/chargeslbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="CHARGES"
+            android:text="CHARGES : "
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/charges"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="CHARGES"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="#000000"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/folupconversationlbl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="REMARKS FOR TECHNICIAN"
+                android:text="REMARKS FOR TECHNICIAN"
+                android:maxLines="1"/>
+
+            <EditText
+                android:id="@+id/folupconversation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:lines="8"
+                android:inputType="textMultiLine|textCapCharacters"
+                android:gravity="top|left"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="0"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tabletoplocationstock"
+                android:layout_below="@+id/header_toplocationstock">
+            </TableLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

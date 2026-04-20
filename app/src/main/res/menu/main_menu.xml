@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/btnPay"
+        android:orderInCategory="1"
+        android:title="Make Payment"
+        app:showAsAction="always"
+        android:icon="@drawable/payment"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/btnCalender"
+        android:orderInCategory="2"
+        android:title="Calender"
+        app:showAsAction="always"
+        android:icon="@drawable/calender"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/btnlocation"
+        android:orderInCategory="3"
+        android:title="Nearby Stores"
+        app:showAsAction="always"
+        android:icon="@drawable/pin_white"/>
+
+    <item
+        android:id="@+id/btnSpeak"
+        android:orderInCategory="4"
+        android:title="Speak"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_mic_white_24dp"/>
+
+    <item
+        android:id="@+id/btnComplaint"
+        android:orderInCategory="5"
+        android:title="Create Complaint"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_person_white"/>
+</menu>

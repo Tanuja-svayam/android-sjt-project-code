@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+
+    <TextView
+        android:id="@+id/voucherdt_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Date : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/voucherdt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/voucherdt_label"/>
+
+    <TextView
+        android:id="@+id/trndesc_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/voucherdt_label"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="TRN ID : "/>
+
+    <TextView
+        android:id="@+id/trndesc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/voucherdt"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/trndesc_label"/>
+
+     <TextView
+        android:id="@+id/debit_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trndesc_label"
+        android:gravity="right"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"
+        android:text="Debit : " />
+
+    <TextView
+        android:id="@+id/debit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/debit_label"
+        android:layout_below="@id/trndesc"
+        android:gravity="right"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"/>
+
+
+    <TextView
+        android:id="@+id/credit_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/debit_label"
+        android:gravity="right"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"
+        android:text="Credit : " />
+
+    <TextView
+        android:id="@+id/credit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/credit_label"
+        android:layout_below="@id/debit"
+        android:gravity="right"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"/>
+
+    <TextView
+        android:id="@+id/refno_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credit_label"
+        android:gravity="right"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"
+        android:text="Ref. No : " />
+
+    <TextView
+        android:id="@+id/refno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/refno_label"
+        android:layout_below="@id/credit"
+        android:gravity="right"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"/>
+
+
+</RelativeLayout>

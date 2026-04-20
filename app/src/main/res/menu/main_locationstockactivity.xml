@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_brandwise"
+        android:orderInCategory="100"
+        android:title="Brandwise"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_categorywise"
+        android:orderInCategory="100"
+        android:title="Categorywise"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_modelwise"
+        android:orderInCategory="100"
+        android:title="Modelwise"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/btnExportToPdf"
+        android:orderInCategory="1"
+        android:title="Export To PDF"
+        app:showAsAction="always"
+        android:icon="@drawable/exportpdf"/>
+
+    <item
+        android:id="@+id/btnExportToExcel"
+        android:orderInCategory="1"
+        android:title="Export To Excel"
+        app:showAsAction="always"
+        android:icon="@drawable/exportexcel"/>
+
+</menu>

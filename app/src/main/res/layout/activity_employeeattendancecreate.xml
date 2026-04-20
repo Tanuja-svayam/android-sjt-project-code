@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:label="@string/app_name">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:textSize="25sp"
+            android:text=""
+            android:maxLines="1"/>
+
+
+        <RadioGroup
+            android:id="@+id/radioAttedance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/radioTimeIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time In"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioTimeOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time Out" />
+
+            <RadioButton
+                android:id="@+id/radioWeeklyOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly Off" />
+
+            <RadioButton
+                android:id="@+id/radioLeave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leave" />
+
+            <RadioButton
+                android:id="@+id/radioHoliday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Holiday" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Remark (If Any)" />
+
+        <EditText
+            android:id="@+id/remarks"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:textSize="15sp"
+            android:text=""
+            android:maxLines="1"/>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Submit"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</ScrollView>

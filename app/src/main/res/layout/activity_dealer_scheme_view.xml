@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <TextView
+        android:id="@+id/schemacode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:typeface="sans"
+        android:textSize="15dip"
+        android:textColor="#040404"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/custnamelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/schemacode"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Supplier"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/custname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/schemacode"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/brandnamelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custnamelabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Brand"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/brandname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custname"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/vsupschfromdatelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/brandnamelabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Scheme Period"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/vsupschfromdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/brandname"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/schemvallabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vsupschfromdatelabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Scheme Value"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/schemval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vsupschfromdate"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/targetvaluelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/schemvallabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Target Value"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/targetvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/schemval"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+
+ 
+    <TextView
+        android:id="@+id/soldvaluelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/targetvaluelabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Sale"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/soldvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/targetvalue"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/returnvaluelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/soldvaluelabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Return"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/returnvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/soldvalue"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/achievedvaluelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/returnvaluelabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Net Sale"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/achievedvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/returnvalue"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/diffvaluelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/achievedvaluelabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Target GAP"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/diffvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/achievedvalue"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/value_netlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diffvaluelabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Basic Sales Value"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/value_net"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diffvalue"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/schemval_achievedlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/value_netlabel"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Scheme Achieved Amount (CN)"
+        android:layout_alignParentLeft="true"/>
+
+
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/schemval_achieved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/value_net"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_alignParentRight="true"/>
+
+    <View
+        android:id="@+id/seplabel1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@id/schemval_achieved"/>
+
+</RelativeLayout>

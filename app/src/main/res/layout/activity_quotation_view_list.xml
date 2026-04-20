@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+    <!--  ListRow Left sied Thumbnail image -->
+
+    <!-- Title Of Song-->
+    <TextView
+        android:id="@+id/custname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="17dip"
+        android:textStyle="bold"/>
+    <!-- Artist Name -->
+
+    <TextView
+        android:id="@+id/invordernolabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custname"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:text="Quotation No : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/invorderno"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custname"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/invordernolabel"/>
+
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/vinvorderdtlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invordernolabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:text="Quotation Date : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/vinvorderdt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invordernolabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/vinvorderdtlabel"/>
+
+    <TextView
+        android:id="@+id/netinvoiceamtlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vinvorderdtlabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:text="Quotation Value : "/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/netinvoiceamt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vinvorderdtlabel"
+        android:textColor="#343434"
+        android:textSize="17dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/netinvoiceamtlabel"/>
+
+
+</RelativeLayout>

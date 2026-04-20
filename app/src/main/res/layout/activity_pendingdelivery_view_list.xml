@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <TextView
+        android:id="@+id/custname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:typeface="sans"
+        android:textSize="15dip"
+        android:textColor="#040404"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/invordernolabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custname"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Invoice No"/>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/invorderno"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custname"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/mobilelabel"/>
+
+    <TextView
+        android:id="@+id/mobilelabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invordernolabel"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Mobile"/>
+
+    <TextView
+        android:id="@+id/customermobileno"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invorderno"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/mobilelabel"
+        />
+    <TextView
+        android:id="@+id/custtelephonelabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mobilelabel"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:text="Telephone"/>
+
+    <TextView
+        android:id="@+id/custtelephone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customermobileno"
+        android:textColor="#343434"
+        android:textSize="15dip"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/custtelephonelabel"/>
+
+    <TextView
+        android:id="@+id/custaddresslabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custtelephonelabel"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"
+        android:text="Address" />
+
+
+    <TextView
+        android:id="@+id/custaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/custaddresslabel"
+        android:layout_below="@id/custtelephone"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"/>
+
+    <TextView
+        android:id="@+id/custdeliveryaddresslabel"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custaddress"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"
+        android:text="Delivery Address"
+        />
+
+    <TextView
+        android:id="@+id/custdeliveryaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/custdeliveryaddresslabel"
+        android:layout_below="@id/custaddress"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"/>
+
+    <TextView
+        android:id="@+id/topcategorynamelable"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custdeliveryaddress"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"
+        android:text="Category"/>
+
+    <TextView
+        android:id="@+id/topcategoryname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/topcategorynamelable"
+        android:layout_below="@id/custdeliveryaddress"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"/>
+
+
+
+
+    <TextView
+        android:id="@+id/parentcategorynamelable"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topcategoryname"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"
+        android:text="Sub Category"/>
+
+    <TextView
+        android:id="@+id/parentcategoryname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/parentcategorynamelable"
+        android:layout_below="@id/topcategoryname"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"/>
+
+    <TextView
+        android:id="@+id/categorynamelable"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/parentcategoryname"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"
+        android:text="Category"/>
+
+    <TextView
+        android:id="@+id/categoryname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/categorynamelable"
+        android:layout_below="@id/parentcategoryname"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"/>
+
+   <TextView
+        android:id="@+id/brandnamelable"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoryname"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"
+        android:text="Brand"/>
+
+    <TextView
+        android:id="@+id/brandname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/brandnamelable"
+        android:layout_below="@id/categoryname"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"/>
+
+    <TextView
+        android:id="@+id/modelnamelable"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/brandname"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"
+        android:text="Model"/>
+
+    <TextView
+        android:id="@+id/modelname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/modelnamelable"
+        android:layout_below="@id/brandname"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"/>
+
+    <TextView
+        android:id="@+id/serialnolable"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/modelname"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"
+        android:text="Serial No"/>
+
+    <TextView
+        android:id="@+id/serialno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/serialnolable"
+        android:layout_below="@id/modelname"
+        android:gravity="left"
+        android:layout_marginRight="5dip"
+        android:textSize="15dip"
+        android:textColor="#343434"/>
+
+    <TextView android:id="@+id/sysorderdtlno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:visibility="invisible"/>
+    <TextView android:id="@+id/vinvorderdt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:visibility="invisible"/>
+
+    <TextView android:id="@+id/custemailid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+    <TextView android:id="@+id/picklocationname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+    <TextView android:id="@+id/vexpected_delivery_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+    <TextView android:id="@+id/delorderno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+    <TextView android:id="@+id/transportcharges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+    <TextView android:id="@+id/deliveryinstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+    <TextView android:id="@+id/delivery_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+    </RelativeLayout>

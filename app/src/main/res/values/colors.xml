@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="shadow_start">#80000000</color>
+    <color name="shadow_end">#00000000</color>
+
+    <color name="colorPrimary">#F36621</color>
+    <color name="colorPrimaryDark">#F36621</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="divider_color">#ffffff</color>
+
+    <color name="tableHeaderBackground">#03c3ca</color>
+    <color name="tableHeaderColor">#ffffff</color>
+    <color name="tableRowColor">#f2efef</color>
+
+    <color name="tableOddRowColor">#d7d4d4</color>
+
+    <color name="tableFooterBackground">#21468c</color>
+
+    <color name="primary">#102F53</color>
+    <color name="button_bg">#ec5215</color>
+
+    <color name="txt_font">#4e5572</color>
+    <color name="view_background">#e8ecfa</color>
+    <color name="btn_bg">#277bec</color>
+
+   <color name="action_bar">#1f2649</color>
+
+        <color name="backgroundcolor">#fcfcfc</color>
+        <color name="lightgray">#ededed</color>
+        <color name="deeppurple">#7c4dff</color>
+        <color name="yello">#ffb300</color>
+
+
+        <color name="darkblue">#23283a</color>
+        <color name="testcolorblue">#152b38</color>
+    <color name="purple_700">#6200EE</color>
+    <color name="green">#388E3C</color>
+    <color name="blue">#1976D2</color>
+    <color name="red">#D32F2F</color>
+    <color name="black">#212121</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="col_30">#D3CDDC39</color>
+    <color name="col_45">#FFEB3B</color>
+    <color name="col_60">#FF9800</color>
+    <color name="col_90">#FF5722</color>
+    <color name="col_ab_90">#F44336</color>
+
+    <color name="Indigo">#2c3e50</color>
+    <color name="yellow">#F1C40F</color>
+    <color name="brown">#312723</color>
+    <color name="cyan">#00E5FF</color>
+    <color name="pink">#F50057</color>
+    <color name="deepPurple">#673AB7</color>
+    <color name="lime">#C6FF00</color>
+    <color name="darkIndigo">#212E3A</color>
+    <color name="darkIndigo2">#3C4955</color>
+    <color name="lightIndigo">#A0BDD8</color>
+    <color name="Grey">#5E5E5E</color>
+    <color name="lightGrey">#C5C5C5</color>
+    <color name="darkGrey">#35363A</color>
+    <color name="darkGrey2">#252525</color>
+    <color name="lightGrey2">#5A5A5A</color>
+    <color name="lBlack">#1F1F1F</color>
+    <color name="Grey900">#212121</color>
+    <color name="Grey800">#424242</color>
+    <color name="album_title">#4c4c4c</color>
+    <color name="color9">#f84c44</color>
+    <color name="color11">#51C1EE</color>
+    <color name="lite_blue">#42a5f5</color>
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:label="@string/app_name">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:text="Voucher Number"
+            android:textStyle="bold"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/documentno"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:text=""
+                android:maxLines="1"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/digitalloandtlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="DATE"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <TextView android:id="@+id/digitalloandt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false"
+                android:onClick="setdigitalloandt"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/approvalcodelbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Approval Code "
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText android:id="@+id/approvalcode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Mode" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/digitalcompanyname"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false">
+            </EditText>
+
+            <Button android:text="Select"
+                android:id="@+id/Button_digitalcompanyname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/digitalloanamtlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Wallet Amount"
+            android:maxLines="1"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText android:id="@+id/digitalloanamt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:inputType="numberDecimal"
+                android:gravity="right"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/login_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="#e30000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+
+        <Button
+            android:id="@+id/btnCreateWalletReceipt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Submit"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_margin="3dp"/>
+    </LinearLayout>
+</ScrollView>

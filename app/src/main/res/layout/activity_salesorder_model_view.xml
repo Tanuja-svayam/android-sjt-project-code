@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip">
+
+        <TextView
+            android:id="@+id/modelcode1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:id="@+id/ordramount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:text=""
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/submit_model"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Save Product"
+            android:onClick="onClick_submit"
+            android:textColor="#fff"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/picklocationname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Pick Location"
+            android:textColor="#fff"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/add_serial"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Add Serial Number"
+            android:onClick="onClick_add_serial"
+            android:textColor="#fff"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/add_model"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Add Next Model"
+            android:onClick="onClick_add_product"
+            android:textColor="#fff"
+            android:layout_marginBottom="5dp"/>
+
+        <Button
+            android:id="@+id/btnback"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="Back"
+            android:onClick="onClick_Back"
+            android:textColor="#fff"
+            android:layout_marginBottom="5dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="#b5b5b5"
+            android:dividerHeight="1dp"
+            android:listSelector="@drawable/list_selector" />
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tabletoplocationstock">
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>

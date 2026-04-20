@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Complaint Type" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/complaint_type"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false">
+            </EditText>
+
+            <Button android:text="Select"
+                android:id="@+id/Button_complaint_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Priority" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent">
+
+            <EditText
+                android:id="@+id/complaintpriority"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:inputType="none"
+                android:textIsSelectable="true"
+                android:focusable="false">
+            </EditText>
+
+            <Button android:text="Select"
+                android:id="@+id/Button_complaintpriority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </Button>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/complaintnumberlbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Complaint No"
+            android:text="Complaint No"
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/complaintnumber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Complaint No"
+            android:gravity="top|left"
+            android:enabled="false"
+
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/remarkslbl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Complaint Description"
+            android:text="Description"
+            android:maxLines="1"/>
+
+        <EditText
+            android:id="@+id/remarks"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:lines="5"
+            android:inputType="textMultiLine|textCapCharacters"
+            android:gravity="top|left"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/button_bg"
+            android:onClick="onClick_submit"
+            android:text="Submit"
+            android:layout_marginTop="5dp"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"/>
+
+        <Button
+            android:id="@+id/btnCapturePicture"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/btnTakePicture" />
+
+        <TextView
+            android:id="@+id/login_error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="#e30000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

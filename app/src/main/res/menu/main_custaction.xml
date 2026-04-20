@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_wa"
+        android:orderInCategory="100"
+        android:title="WhatsApp"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_ledger"
+        android:orderInCategory="100"
+        android:title="Ledger"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_giftcardledger"
+        android:orderInCategory="100"
+        android:title="Gift Card Ledger"
+        app:showAsAction="never" />
+
+</menu>
